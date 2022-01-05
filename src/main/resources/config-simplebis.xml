@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="QuestionsJava" class="tsi.ensg.jee.tp2.simplebis.QuestionsJava">
+        <property name="questions">
+            <list>
+                <value>Quelle est la premiere question simple ?</value>
+                <value>Quelle est la deuxième question simple ?</value>
+                <value>Quelle est la troisième question simple ?</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="QuestionsJavaAvance" class="tsi.ensg.jee.tp2.simplebis.QuestionsJavaAvance">
+        <property name="questions">
+            <list>
+                <value>Quelle est la premiere question compliquée ?</value>
+                <value>Quelle est la deuxième question compliquée ?</value>
+                <value>Quelle est la troisième question compliquée ?</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="QuestionService" class="tsi.ensg.jee.tp2.simplebis.QuestionService">
+        <constructor-arg ref="QuestionsJava"/>
+    </bean>
+
+    <bean id="QuestionService2" class="tsi.ensg.jee.tp2.simplebis.QuestionService">
+        <property name="questions" ref="QuestionsJavaAvance"></property>
+    </bean>
+
+
+</beans>
