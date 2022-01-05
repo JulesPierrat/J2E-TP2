@@ -13,5 +13,12 @@ public class Application {
         System.out.println("#################################################");
         System.out.println(questions.getQuestion());
         System.out.println("#################################################");
+        
+        // Pose une question via Setters
+        QuestionService questions2 = (QuestionService) context.getBean("QuestionService2");
+        System.out.println("#################################################");
+        System.out.println(questions2.getQuestion());
+        System.out.println("#################################################");
+
     }
 }

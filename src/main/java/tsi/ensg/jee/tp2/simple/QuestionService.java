@@ -5,6 +5,10 @@ public class QuestionService {
     Questions questions;
 
     // Constructor
+    public QuestionService(){
+        this.questions = null;
+    }
+    
     public QuestionService(Questions questions){
         this.questions = questions;
     }

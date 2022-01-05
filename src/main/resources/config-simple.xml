@@ -9,7 +9,11 @@
     <bean id="QuestionsJavaAvance" class="tsi.ensg.jee.tp2.simple.QuestionsJavaAvance"/>
 
     <bean id="QuestionService" class="tsi.ensg.jee.tp2.simple.QuestionService">
-        <constructor-arg ref="QuestionsJavaAvance"/>
+        <constructor-arg ref="QuestionsJava"/>
+    </bean>
+
+    <bean id="QuestionService2" class="tsi.ensg.jee.tp2.simple.QuestionService">
+        <property name="questions" ref="QuestionsJavaAvance"></property>
     </bean>
 
 
